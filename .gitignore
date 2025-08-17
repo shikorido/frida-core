@@ -16,3 +16,5 @@
 /src/linux/helpers/build/
 /src/linux/helpers/ext/
 /subprojects/*
+/vapi/frida-core-1.0.deps
+/vapi/frida-core-1.0.vapi

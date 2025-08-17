@@ -61,6 +61,9 @@ def main(argv):
     command.set_defaults(func=lambda args: compile(args.privdir, pickle.loads(base64.b64decode(args.state))))
 
     args = parser.parse_args()
+    #args.host_os = "android"
+    #args.host_arch = "arm64"
+    #args.compat = set(["disabled"])
     if "func" in args:
         try:
             args.func(args)
@@ -666,4 +669,5 @@ MINGW_ARCHS = {
 
 
 if __name__ == "__main__":
+    #exit(0)
     main(sys.argv)

@@ -60,6 +60,9 @@ def main(argv: List[str]):
     ranlib_cmd_array = pop_cmd_array_arg(args)
 
     try:
+        #qqq_NO_CGO
+        #raise Exception("NO CGO")
+        #!qqq
         config = detect_config(
             go,
             host_os,

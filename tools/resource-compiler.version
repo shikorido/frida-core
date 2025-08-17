@@ -1,8 +1,9 @@
 {
   global:
     # FreeBSD needs these two:
-    __progname;
-    environ;
+    # Android fails to link cause of these two...
+    #__progname;
+    #environ;
 
   local:
     *;

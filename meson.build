@@ -357,10 +357,17 @@ else
 endif
 
 if host_os == 'android'
-  minizip_dep = dependency('minizip', required: false, default_options: [
+  #qqq_required_for_gadget_(false_is_default)
+  #qqq_added_native_true(error)
+  #qqq_gadget_needs_minizip_at_least
+  minizip_dep = dependency('minizip', required: true, default_options: [
     'zlib=enabled',
     'lzma=disabled',
   ])
+  #qqq_from_gum
+  if minizip_dep.found()
+    cdata.set('HAVE_MINIZIP', 1)
+  endif
 endif
 
 if host_toolchain == 'microsoft'
